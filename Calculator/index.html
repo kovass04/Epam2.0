@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <p>number 1<input type="text" id="n1"></p>
+        <p>number 2<input type="text" id="n2"></p>
+        <button onclick="plus()">+</button>
+        <button onclick="minus()">-</button>
+        <button onclick="multiplication()">X</button>
+        <button onclick="division()">/</button>
+        <hr>
+        <p>Result: <span id="out"></span></p>
+<script>
+        let num1;  // Создаём переменную где будет хранится значение первого числа
+let num2;  // Создаём переменную где будет хранится значение второго числа
+ 
+// Создаём переменную и берём элемент, куда будет выводится результат 
+let out = document.getElementById('out');
+ 
+// функция сложения
+function plus() {
+ num1 = document.getElementById('n1').value; 
+ num1 = parseInt(num1)
+ num2 = document.getElementById('n2').value;
+ num2 = parseInt(num2)
+ 
+ out.innerHTML = num1 + num2;
+}
+ 
+// функция вычитания
+function minus() {
+ num1 = document.getElementById('n1').value; 
+ num1 = parseInt(num1)
+ num2 = document.getElementById('n2').value;
+ num2 = parseInt(num2)
+ 
+ out.innerHTML = num1 - num2;
+}
+ 
+// функция умножения
+function multiplication() {
+ num1 = document.getElementById('n1').value; 
+ num1 = parseInt(num1)
+ num2 = document.getElementById('n2').value;
+ num2 = parseInt(num2)
+ 
+ out.innerHTML = num1 * num2;
+}
+ 
+// функция деления
+function division() {
+ num1 = document.getElementById('n1').value; 
+ num1 = parseInt(num1)
+ num2 = document.getElementById('n2').value;
+ num2 = parseInt(num2)
+ 
+ out.innerHTML = num1 / num2;
+}
+</script>
+</body>
+</html>
